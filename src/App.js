@@ -26,11 +26,6 @@ let arr = [
     title: "Dağ 3",
     par: "Açıklama 3",
   },
-  {
-    id: 4,
-    title: "Dağ 4",
-    par: "Açıklama 4",
-  },
 ];
 
 const App = () => {
@@ -41,13 +36,14 @@ const App = () => {
   const click = () => {
     setTitle("");
     setPar("");
-    const copyList = [...list];
-    copyList.push({
-      id: 5,
-      title,
-      par,
-    });
-    setList(copyList);
+    setList([
+      ...list,
+      {
+        id: 5,
+        title,
+        par,
+      },
+    ]);
   };
   return (
     <Container>
@@ -68,7 +64,7 @@ const App = () => {
         <Button
           onClick={click}
           variant="gradient"
-          gradient={{ from: "teal", to: "lime", deg: 105 }}
+          gradient={{ from: "indigo", to: "cyan" }}
         >
           Kart Ekle
         </Button>
