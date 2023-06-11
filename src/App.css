@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+body {
+  background-color: #282c34;
+  color: aliceblue;
+}
+
+.Cards {
+  display: flex;
+  gap: 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
