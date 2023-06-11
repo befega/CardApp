@@ -1,6 +1,6 @@
-import { Card, Image, Text, Button, Group } from "@mantine/core";
+import { Card, Image, Text, Button, Group, CloseButton } from "@mantine/core";
 
-const cardComps = ({ title, par, lesson, i }) => {
+const cardComps = ({ title, par, lesson, i, click }) => {
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section>
@@ -13,6 +13,12 @@ const cardComps = ({ title, par, lesson, i }) => {
 
       <Group position="apart" mt="md" mb="xs">
         <Text weight={500}>{title}</Text>
+        <CloseButton
+          title="Close popover"
+          size="xl"
+          iconSize={20}
+          onClick={click}
+        />
       </Group>
 
       <Text size="sm" color="dimmed">
